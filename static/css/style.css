@@ -1,0 +1,317 @@
+#app{ position:absolute; left:0; top:0; right: 0; bottom: 0; }
+
+.page{ display: block; background: #FFF; }
+.grayBg{ background: #F4F4F4; }
+.banner img{ height:auto; width:100%; display: block; }
+
+.homeNav{ overflow: hidden; }
+.myCatSwiper.swiper-container{ overflow: visible; background: #FFF; height:42px; border-bottom:1px solid #EEE; }
+.myCatSwiper .swiper-slide{ font-size:.7rem; line-height: 42px; text-align: center; }
+.myCatSwiper .active:after{ position: absolute; height: 1px; background: #0894ec; width:100%; bottom: -1px; content: ''; left: 0; }
+
+.wjModel{
+  display: inline-block;
+  margin-right: .3rem;
+  font-size: .6rem;
+  vertical-align: middle;
+  color:#999;
+}
+
+.postItem{
+  background: #FFF;
+  padding: .7rem;
+  overflow: hidden;
+  border-bottom: 1px solid #F4F4F4;
+}
+
+.pTop{
+  padding-bottom: .1rem;
+}
+.pTop img{ height:1rem; width:1rem; border-radius: 1rem;
+  display: inline-block; vertical-align: middle;
+  position: relative;
+  top:-.1rem;
+  margin-right: .2rem;
+}
+.pTitle{ font-size: .8rem; }
+.pAloneImage{
+  float: right;
+  width:6rem;
+  height:4.5rem;
+  margin-left: .5rem;
+}
+.pAloneImage img{
+  width:6rem;
+  height:4.5rem;
+  border-radius: 3px;
+}
+
+.pMulImage{
+  overflow: hidden;
+  margin: .3rem -.2rem 0;
+}
+
+.pmiItem{
+  float: left;
+  width:33.33333%;
+  overflow: hidden;
+  padding:0 .2rem;
+}
+.pmiWrap{}
+.pmiWrap img{ border-radius: 3px; width:100%; height:auto; }
+
+.empty{ display: flex; align-items: center; justify-content: center; height:10rem; }
+.emptyIcon{ background: url(../img/empty.png) no-repeat center; height:4rem; background-size: auto 100%; }
+.empty2{ width:5rem; text-align:center; }
+.emptyText{ font-size:.6rem; color:#999; padding-top: .5rem; }
+.empty-fill{ height:100%; }
+
+.singleHead{ padding: .7rem; background: #FFF; border-bottom: 1px solid #EEE; }
+.singleHead h2{ font-size: 1rem; margin: 0; }
+.shAuthor{ overflow: hidden; margin-top: .5rem; }
+.shAvatar{ height: 2rem; width:2rem; float: left; }
+.shAvatar img{ height: 2rem; width:2rem; border-radius: 2rem; }
+.shText{ margin-left: 2.5rem; }
+.shText div{ font-size: .7rem; }
+.shText p{ margin:0; line-height: 1;}
+
+.wjContent{ font-size: .7rem; background: #FFF; padding:.7rem; line-height: 1.7; }
+.wjContent p{ margin: 0 0 .5rem; }
+.wjContent p:last-child{ margin: 0; }
+.wjContent img{ max-width: 100%; height:auto; }
+.wjContent blockquote{ margin: 0; background: #F6F6F6; padding:.5rem; margin-bottom: .5rem; border-radius: 5px; }
+.wjContent ul, .wjContent ol{ padding-left: .8rem; font-size: .6rem; }
+.wjContent pre{ line-height: 1.5; color: #abb2bf; margin: 0 0 .5rem; padding:.2rem .5rem; border-radius: 3px; font-size: .6rem; background: #282c34; }
+.wjContent pre:last-child{ margin-bottom: 0; }
+
+.bottomTool{ display: flex; background: #FFF; border-top: 1px solid #EEE; height:2.5rem; position: absolute; bottom: 0; width: 100%; }
+.btItem{ flex: 1; padding-top:.2rem; font-size: .5rem; text-align: center; color: #666; }
+.btItem i{ font-size: 1rem; line-height: 1.3; display: block; }
+.btItem.active{ color:#0a8ddf; }
+.bottomTool~.content{ bottom: 2.5rem; }
+
+.topNav{ background: #FFF; border-bottom: 1px solid #EEE; height:2.2rem; line-height: 2.2rem; position: absolute; top: 0; width: 100%; }
+.topNav h1{ margin: 0 .7rem; font-size:.8rem; font-weight: normal; white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+.topNav i{ font-size: 1rem; }
+.topNav~.content{ top: 2.2rem; }
+.tnLeft{ padding-left: .5rem; }
+.tnRight{ padding-right: .5rem; }
+.topNav .tnLeft~h1{ margin-left: 1.8rem; }
+.topNav .tnRight~h1{ margin-right: 1.8rem; }
+
+.shDo{ padding: .35rem 0; }
+.shDo .button{ height: 1.2rem; font-size: .6rem; line-height: 1.1rem; }
+.shDo .button i{ font-size: .6rem; }
+
+.mod{ background: #FFF; margin: .5rem 0; }
+.modTitle{ overflow: hidden; padding:.5rem .7rem; border-bottom: 1px solid #EEE; }
+.modTitle h3{ margin: 0; font-size:.7rem; font-weight: normal; }
+.modTitle h3 .badge{ color:#999; padding: 0 .2rem; vertical-align: middle; margin-left: .4rem; font-size:.6rem; border-radius: 3px; border:1px solid #EEE; }
+.modTitle span{ font-size:.6rem; display: inline-block; padding-top: .1rem; color:#999; }
+.modTitle .icon-right{ font-size: .5rem; }
+.modTitle .icon-xiangxia{ font-size: .7rem; }
+
+.rpItem{ overflow: hidden; padding:.4rem 0 .3rem; margin: 0 .7rem; border-bottom: 1px solid #F4F4F4; }
+.rpTitle{ font-size: .8rem; line-height: 1rem; margin-bottom: .1rem; }
+.rpImage{ width:4.2rem; margin-left: .5rem; }
+.rpImage img{ width: 4.2rem; height:auto; border-radius: 3px; display: block; }
+
+.clItem{ overflow: hidden; padding:.4rem 0; margin: 0 .7rem; border-bottom: 1px solid #EEE; }
+.clAvatar{ width:2rem; }
+.clAvatar img{ width:2rem; height:2rem; border-radius: 2rem; }
+.clText{ margin-left: 2.5rem; }
+.clMeta .pull-right{ margin-top: .1rem; }
+.clMeta .pull-right:first-child{ margin-right: 0; }
+.clContent{ padding: .2rem 0; line-height: 1.5; }
+
+
+.formItem{ margin: .7rem; }
+.formItem input[type='text'],
+.formItem input[type='password'],
+.formItem textarea{
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  height: 2rem;
+  width: 100%;
+  padding: 0 .5rem;
+  font-size: .7rem;
+}
+.formItem textarea{
+  padding: .35rem .5rem;
+  height:7rem;
+}
+.formItem input[type='text']:focus, .formItem input[type='password']:focus, .formItem textarea:focus{ border-color:#0894ec; }
+.formItemAgreement{ font-size: .7rem; }
+.formItemAgreement input{ vertical-align: middle; position: relative; top: -1px; }
+.formItemAgreement span{ color:#0894ec; }
+.lrlInfo{ font-size:12px; text-align: center; color:#999; }
+
+.lrFormWrap{ }
+.lrFormWrapBox{ width: 100%; }
+.lrFormWrap .formItem{
+  margin:1rem;
+}
+.lrLogo{ width: 3rem; height: 3rem; margin: 1rem auto; }
+.lrLogo img{ width: 3rem; height: 3rem; border-radius: 2rem; display: block; }
+
+.regOther{ display: flex; text-align: center; margin: 1rem 3rem; }
+.regOther span{ flex: 1; }
+.regOther span i{ height: 1.8rem; width: 1.8rem; color:#FFF; line-height: 1.8rem; font-size: 1rem; border-radius: 2rem; background: #0894ec; display: block; margin: auto; }
+.regOther span:nth-child(2) i{ background: #f6383a; }
+.regOther span:nth-child(3) i{ background: #2ac845; }
+.regOther span:nth-child(4) i{ background: #2ac845; }
+
+.button-block{ width: 100%; }
+
+.regOtherText{ text-align: center; position: relative; bottom: -.4rem; font-size: .6rem; color:#999; }
+
+.ucHead{ background: #FFF; overflow: hidden; padding: .7rem; }
+.uchAvatar{ height: 2.8rem; width: 2.8rem; }
+.uchAvatar img{ height: 2.8rem; width: 2.8rem; border-radius: 3rem; }
+.uchText{ margin-left: 3.3rem; }
+.uchText h3{ font-size: .8rem; font-weight: normal; margin: .4rem 0 0 0; }
+.uchText p{ font-size: .6rem; color:#999; margin: 0; }
+.listBlock{ margin: .5rem 0; }
+.listBlockTitle{ font-size: .6rem; padding: .4rem .7rem 0; color:#999; }
+.listItem{ padding: .4rem .7rem; background: #FFF; border-bottom: 1px solid #EEE; overflow: hidden; font-size: .7rem; }
+.hasRight{
+  background: url(http://www.wenjiangs.com/wp-content/themes/wtheme/images/right.png) no-repeat calc(100% - .8rem) center #FFF;
+  background-size: auto .6rem;
+  padding-right: 1.5rem;
+}
+.listTitle{ float: left; }
+.listContent{ float: right; color:#999; }
+
+.topicItem{ background: #FFF; margin: .5rem 0; overflow: hidden; }
+.topicItem .shAuthor{ padding: 0 .7rem; }
+.tiFoot{ display: flex; border-top: 1px solid #EEE; }
+.tiFoot div{ color:#999; flex: 1; border-right: 1px solid #EEE; line-height: 1.6rem; text-align: center; font-size: .6rem; }
+.tiFoot div i{ font-size: .7rem; }
+.tiFoot div:last-child{ border-right: none; }
+.tiAloneImage{ margin:0 0 .7rem .7rem; width: 60%; }
+.tiAloneImage img{ width:100%; height: auto; display: block; }
+.tiMulImage{ overflow: hidden; margin: 0 .2rem .2rem .7rem; }
+.timItem{ padding:0 .5rem .5rem 0; width: 33.333333%; float:left; }
+.timItem img{ height: auto; width:100%; display: block; }
+
+/*messageItem*/
+.messageItem{ border-bottom:1px solid #EEE; overflow: hidden; padding:.7rem; background: #FFF; }
+.messageIcon{ border-radius:2rem; height:2rem; overflow: hidden; width:2rem; float:left; }
+.messageIcon img{ height:2rem; height:2rem; display: block; }
+.messageText{ margin-left: 2.5rem; }
+.messageText h3{ font-size:.7rem; margin: 0; font-weight: normal; }
+.messageText p{ font-size:.6rem; color:#999; margin:0; white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.messageText h3 span{ float:right; font-size:12px; color:#999; padding-top:.2rem; }
+/*messageItem end*/
+
+.tabs{ display: flex; border-bottom: 1px solid #EEE; position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2rem; background: #FFF; }
+.tabItem{ flex: 1; text-align: center; font-size: .7rem; height:2rem; line-height: 2rem; }
+.tabItem.active{ border-bottom: #0894ec 1px solid; color:#0894ec; }
+.tabs~.content{ top:2rem; }
+
+/*chat*/
+.chat-message{ height:100%; padding-top:10px; overflow:auto; }
+.chat-time{ text-align:center; margin-bottom:5px; }
+.chat-time span{ font-size:12px; background:#999; color:#FFF; display:inline-block; margin:auto; overflow:hidden; border-radius:20px; line-height:1.8; vertical-align:middle; padding:0 10px; }
+.chat-message img{ width:33px; height:33px; border-radius:30px; overflow:hidden; float:left; }
+.chat-message p{ margin:0; font-size:.7rem; background:#FFF; position:relative; margin-left:15px; max-width:80%; padding:7px 10px; border-radius:3px; float:left; }
+.chat-send, .chat-show{ overflow:hidden; padding:.4rem .75rem; line-height: 1.4; }
+.msg{ overflow:hidden; }
+.chat-send p::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #FFF;
+  left: -5px; /*向左侧外部延伸箭头box的一半宽度*/
+  position: absolute;
+  transform: rotate(45deg); /*旋转45度*/
+  top:11px; /*箭头在数值方向上居中*/
+}
+.chat-show p::after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #FFF;
+  right: -5px; /*向左侧外部延伸箭头box的一半宽度*/
+  position: absolute;
+  transform: rotate(45deg); /*旋转45度*/
+  top:11px; /*箭头在数值方向上居中*/
+}
+.chat-show img{ float:right; }
+.chat-show p{ float:right; margin:0 15px 0 0; }
+/*chat end*/
+
+.sendBox{ position: absolute; background: #FFF; border-top:1px solid #EEE; bottom: 0; width:100%; height: 2.5rem; }
+.sendBox~.content{ bottom: 2.5rem; }
+.sendEmoji{ padding-top: .5rem; margin-right: .3rem; line-height: 1.5rem; }
+.sendEmoji i{ font-size:1.2rem; line-height: 1.5rem; color: #999; }
+.sendBtn{ padding: .5rem .7rem 0 0; }
+.sendBtn .button{ height:1.5rem; }
+.sendText{ margin-right: 5rem; }
+.sendText textarea{ height: 1.5rem; padding:.25rem 0 0 .7rem; border: none; font-size: .7rem; width:100%; margin-top: .5rem; }
+
+.docsItem{ overflow: hidden; padding:.7rem; border-bottom: 1px solid #EEE; background: #FFF; }
+.docsImage{ width: 3.6rem; height:3.6rem; }
+.docsImage img{ width: 3.6rem; height:3.6rem; border-radius: 3px; }
+.docsText{ margin-left:4.5rem; }
+.docsText h3{ margin: 0; font-size: .8rem; font-weight: normal; line-height:1; padding-bottom: .4rem; }
+.docsText p{ font-size: .6rem; margin: 0; color:#999; }
+.docsTabs{ position: static; }
+.docsComment{ background: #FFF; }
+.docsMenu{ background: #FFF; }
+
+.wjMask{ background: rgba(0,0,0,.6); transition:opacity .5s; position: absolute; width:100%; height:100%; opacity: 0; left:-100%; top:0; }
+.wjMask.active{opacity: 1; left:0%; }
+.commentBox{ background: #FFF; transition:bottom .5s; position: absolute; width: 100%; bottom: -100%; z-index: 2011; }
+.commentBox.active{ bottom: 0; }
+.commentBox .formControl{ width:100%; height:7rem; border:none; padding:.5rem .7rem; font-size: .7rem; }
+.cbBtn{ border-top: 1px solid #F4F4F4; overflow: hidden; padding:0 .7rem; }
+.cbBtn button{ height:1.5rem; }
+.cbBtn2{ padding: .5rem 0; float:right; }
+
+.aligncenter{ display: block; margin: auto; }
+
+.inlineLoading{ font-size: .7rem; text-align: center; line-height: 1rem; padding: .5rem; color:#999; }
+.loadIcon{
+  background:url(../img/loading.gif) no-repeat center;
+  height: .8rem; width: .8rem; background-size: .8rem;
+  display: inline-block; vertical-align: middle;
+}
+
+.pageTabs{ top:2.2rem; }
+.pageTabs~.content{ top:4.2rem; }
+
+.settingAvatar .listTitle{ line-height: 2rem; }
+.settingAvatar img{ height: 2rem; width: 2rem; display: block; border-radius: 2rem; }
+
+.bottomBtn{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.bottomBtn button{ border-radius: 0; width:100%; }
+.bottomBtn~.content{ bottom: 2rem; }
+
+.userPostItem{ padding: .5rem .7rem .4rem; border-bottom: 1px solid #EEE; }
+.userPostItem h3{ font-size: .8rem; margin: 0; font-weight: normal; }
+
+.topTabs{ position: absolute; top:2.2rem; width:100%; }
+.topTabs ~ .content{ top:4.4rem; }
+
+.userCommentItem{ background: #FFF; overflow:hidden; margin:.5rem 0; }
+.userCommentItem .wjContent{ padding: .5rem .7rem; }
+.userCommentItem .shAuthor{ margin-top: 0; }
+.quotePost{ background: #F4F4F4; padding:.4rem .5rem .3rem; margin:0 .7rem .7rem; }
+.quotePost h3{ font-weight: normal; font-size: .7rem; margin: 0; }
+
+.commentReplyBedge{ background: #F2F2F2; border-radius: .7rem; margin-left: 10px; display: inline-block; padding: 1px 10px; }

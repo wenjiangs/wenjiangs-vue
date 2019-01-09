@@ -1,0 +1,68 @@
+/*转场动画*/
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+  will-change: transform;
+  transition: .3s all cubic-bezier(0,.61,.46,1);
+  position: absolute;
+}
+.slide-right-enter {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+.slide-left-enter {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+.slide-left-leave-active {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+/*转场动画 end*/
+
+.noMore{ text-align: center; font-size:.7rem; color:#666; padding:.5rem 0; color:#999; }
+.xs-plugin-pullup-container{ font-size:.7rem; line-height: 45px; color:#999; }
+p.weui-toast__content{ font-size: .7rem; }
+
+p.weui-toast__content{
+  font-size:.6rem;
+  padding: .4rem 1rem 0;
+}
+
+div.weui-mask{
+  z-index: 3001;
+}
+div .weui-dialog__title{
+  font-size:.6rem;
+  font-weight: bold;
+}
+div .weui-dialog__btn, div .weui-dialog__bd{
+  font-size: .6rem;
+  color:#000;
+}
+
+div .weui-dialog__bd{
+  padding:.4em 2.6em .4em;
+  margin-bottom:.8em;
+  line-height: 1.6;
+  max-height: 200px;
+  overflow: auto;
+  min-height:36px;
+}
+
+.vux-prompt input{
+  font-size:.6rem;
+  height: 2rem;
+  background: #f7f7f7;
+  border: none;
+  padding:0 .75rem;
+}
+div .weui-dialog__btn_default{
+  color:#999;
+}
+

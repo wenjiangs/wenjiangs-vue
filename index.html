@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0;" name=viewport>
+    <link href="http://at.alicdn.com/t/font_940179_1gro0y0iz9k.css" rel="stylesheet">
+    <link href="./static/css/sm.min.css" rel="stylesheet">
+    <link href="./static/css/common.css" rel="stylesheet">
+    <link href="./static/css/style.css" rel="stylesheet">
+    <title>加载中</title>
+  </head>
+  <body>
+    <div id="sysHeader"></div>
+    <div id="app"></div>
+  <script type="text/javascript" src="./static/js/api.js"></script>
+  <script type="text/javascript">
+  apiready = function () {
+    var sysHeader = $api.byId('sysHeader');
+    var resBar = $api.fixStatusBar(sysHeader);
+    $api.byId('app').style.top = resBar + "px";
+    api.setStatusBarStyle({
+        style: 'dark',
+        color: '#FFF'
+    });
+  }
+  </script>
+  </body>
+</html>
