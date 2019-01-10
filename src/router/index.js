@@ -18,7 +18,6 @@ import userComment from '@/pages/userComment/userComment.vue'
 import userTopic from '@/pages/userTopic/userTopic.vue'
 import userReply from '@/pages/userReply/userReply.vue'
 import userCollection from '@/pages/userCollection/userCollection.vue'
-import postEdit from '@/pages/postEdit/postEdit.vue'
 import error from '@/pages/error/error.vue'
 
 Vue.use(Router)
@@ -43,7 +42,6 @@ export default new Router({
     {path: '/userTopic', name: 'userTopic', component: userTopic, meta:{auth: true, index: 10, title: '我的话题'}},
     {path: '/userReply', name: 'userReply', component: userReply, meta:{auth: true, index: 10, title: '我的回复'}},
     {path: '/userCollection', name: 'userCollection', component: userCollection, meta:{auth: true, index: 10, title: '我的收藏'}},
-    {path: '/postEdit', name: 'postEdit', component: postEdit, meta:{auth: true, index: 20, title: '编辑'}},
     {path: '*', name: 'error', component: error, meta:{auth: false, index: 50, title: '出错了'}}
   ]
 })

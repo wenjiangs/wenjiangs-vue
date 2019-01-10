@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page grayBg">
     <div class="bottomTool" ref="bottomTool">
       <div class="btItem" :class="{active:$route.name=='index'}" @click="toRouter('/')"><i class="iconfont icon-shouye"></i> 首页</div>
       <div class="btItem" :class="{active:$route.name=='topic'}" @click="toRouter('topic')"><i class="iconfont icon-shequguanli"></i> 社区</div>
@@ -18,8 +18,10 @@
       </div>
       <div class="homeNav">
         <swiper :options="categorySwiperOption" ref="myCatSwiper" class="myCatSwiper">
-          <swiper-slide v-for="(item, index) in category" :key="index"
-                        :class="{'active': catIndexID==item.term_id}">{{item.name}}
+          <swiper-slide
+            v-for="(item, index) in category" :key="index"
+            :class="{'active': catIndexID==item.term_id}">
+            <span @click="tabClick(item.term_id)">{{item.name}}</span>
           </swiper-slide>
         </swiper>
       </div>

@@ -8,30 +8,36 @@
       <div class="btItem" @click="showCommentBox">
         <i class="iconfont icon-xiaoxi"></i> 评论 {{post.comment_count}}
       </div>
-      <div class="btItem" @click="collection" v-show="post.collection_current">
+      <div class="btItem" @click="postCollection(postID, post.post_type)" v-show="post.collection_current">
         <i class="iconfont icon-xin"></i> 已收藏 {{post.collection}}
       </div>
-      <div class="btItem" @click="collection" v-show="!post.collection_current">
+      <div class="btItem" @click="postCollection(postID, post.post_type)" v-show="!post.collection_current">
         <i class="iconfont icon-xin"></i> 收藏 {{post.collection}}
       </div>
         <div class="btItem">
           <i class="iconfont icon-iconfontfenxiang"></i> 分享
         </div>
-        <template v-if="!isEmpty(userInfo) && userInfo.ID == post.post_author">
-        <div class="btItem" @click="toRouter({path:'postEdit', query:{postID:postID}})">
-          <i class="iconfont icon-bianji"></i> 编辑
-        </div>
-        <div class="btItem" @click="toTrash">
+        <div class="btItem" @click="toTrash"
+             v-if="!isEmpty(userInfo) && userInfo.ID == post.post_author"
+        >
           <i class="iconfont icon-jiufuqianbaoicon05"></i> 删除
         </div>
-      </template>
     </div>
     <div class="content" ref="content">
       <div class="singleHead">
         <h2>{{post.title}}</h2>
         <div class="shAuthor">
           <div class="shDo pull-right">
-            <button type="button" class="button button-info button-sm button-fill"><i class="iconfont icon-jia"></i> 关注</button>
+            <button @click="authorCollection(post.post_author, 'user')"
+                    v-show="!post.collection_author" type="button"
+                    class="button button-info button-sm button-fill">
+              <i class="iconfont icon-jia"></i> 关注
+            </button>
+            <button @click="authorCollection(post.post_author, 'user')"
+              v-show="post.collection_author"
+              type="button" class="button button-info button-sm">
+              <i class="iconfont icon-check"></i> 已关注
+            </button>
           </div>
           <div class="shAvatar"><img :src="post.author_avatar" /></div>
           <div class="shText">

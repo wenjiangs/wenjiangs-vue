@@ -27,7 +27,7 @@ export default {
       categorySwiperOption: {},
       banner: [],
       category: [],
-      catIndexID: 0,
+      catIndexID: '',
       page: 0,
       rows: 10,
       dataList:[],
@@ -51,7 +51,7 @@ export default {
     getCats(){
       this.axiosPost(this, 'getCategories', {}, (res)=>{
         if(res.success){
-          var allPostCat = {"term_id":0,"name":"全部"}
+          var allPostCat = {"term_id":'', "name":"全部"}
           this.category = [allPostCat, ...res.data];
         }
       })
@@ -63,10 +63,11 @@ export default {
       this.axiosPost(this, 'getPosts', {
         page: this.page,
         rows: this.rows,
+        catID: this.catIndexID,
       }, (res)=>{
         this.$vux.loading.hide();
         this.dataList.push(...res.data)
-        if(res.data.length < this.pageRow){
+        if(res.data.length < this.rows){
           this.noMore = true;
         }
         this.isLoading = false;
@@ -78,6 +79,16 @@ export default {
           cb();
         }
       }
+    },
+    tabClick(e){
+      this.catIndexID = e;
+      this.noMore = false;
+      this.dataList = [];
+      this.page = 0;
+      this.$vux.loading.show({
+        text: '加载中',
+      })
+      this.loadData();
     }
   },
   created(){

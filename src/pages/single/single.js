@@ -32,7 +32,12 @@ export default {
       this.$vux.loading.show({
         text: '加载中',
       })
-      this.axiosPost(this, 'getPost', {postID: this.postID}, (res)=>{
+      var postParams = {postID: this.postID}
+      if(!this.isEmpty(this.userInfo)){
+        postParams.user_id = this.userInfo.ID;
+        postParams.token = this.userInfo.token;
+      }
+      this.axiosPost(this, 'getPost', postParams, (res)=>{
         this.post = {};
         this.post = this.postBak = res.data;
         this.$vux.loading.hide();
@@ -71,7 +76,7 @@ export default {
         this.getComments();
       });
     },
-    collection(){
+    collection(ID, Type, cb){
       if(this.isEmpty(this.userInfo)){
         this.$vux.toast.text('请先登录');
         return;
@@ -82,18 +87,32 @@ export default {
       this.axiosPost(this, 'collection', {
         token: this.userInfo.token,
         user_id: this.userInfo.ID,
-        item_id: this.postID,
-        item_type: this.post.post_type
+        item_id: ID,
+        item_type: Type
       }, (res)=>{
         this.$vux.loading.hide();
         this.$vux.toast.text(res.message);
+        cb(res);
+
+      })
+    },
+    postCollection(ID, Type){
+      this.collection(ID, Type, (res)=>{
         if(res.code==1){
-          console.log(this.post.collection)
           this.$set(this.post, 'collection_current', true);
           this.$set(this.post, 'collection', this.post.collection+1);
         }else{
           this.$set(this.post, 'collection_current', false);
           this.$set(this.post, 'collection', this.post.collection-1);
+        }
+      })
+    },
+    authorCollection(ID, Type){
+      this.collection(ID, Type, (res)=>{
+        if(res.code==1){
+          this.$set(this.post, 'collection_author', true);
+        }else{
+          this.$set(this.post, 'collection_author', false);
         }
       })
     },
@@ -160,7 +179,7 @@ export default {
           this.$router.go(-1);
         }
       })
-    }
+    },
   },
   created(){
   },

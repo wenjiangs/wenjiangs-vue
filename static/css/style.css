@@ -11,7 +11,7 @@
 
 .wjModel{
   display: inline-block;
-  margin-right: .3rem;
+  margin-right: .5rem;
   font-size: .6rem;
   vertical-align: middle;
   color:#999;
@@ -81,8 +81,25 @@
 .wjContent img{ max-width: 100%; height:auto; }
 .wjContent blockquote{ margin: 0; background: #F6F6F6; padding:.5rem; margin-bottom: .5rem; border-radius: 5px; }
 .wjContent ul, .wjContent ol{ padding-left: .8rem; font-size: .6rem; }
-.wjContent pre{ line-height: 1.5; color: #abb2bf; margin: 0 0 .5rem; padding:.2rem .5rem; border-radius: 3px; font-size: .6rem; background: #282c34; }
+.wjContent pre{ line-height: 1.2; color: #abb2bf; margin: 0 0 .5rem; padding:.4rem .5rem; border-radius: 3px; font-size: .7rem; background: #282c34; }
 .wjContent pre:last-child{ margin-bottom: 0; }
+.wjContent code{
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+.wjContent pre code{
+  background: none;
+  color: #abb2bf;
+  font-size:100%;
+  border-radius:0;
+  padding:0;
+}
+.wjContent table{ border-top:1px solid #EEE; border-right:1px solid #EEE; }
+.wjContent td, .wjContent th{ padding:2px 4px; border-bottom:1px solid #EEE; border-left:1px solid #EEE; }
+.wjContent th{ background: #F4F4F4; }
 
 .bottomTool{ display: flex; background: #FFF; border-top: 1px solid #EEE; height:2.5rem; position: absolute; bottom: 0; width: 100%; }
 .btItem{ flex: 1; padding-top:.2rem; font-size: .5rem; text-align: center; color: #666; }
@@ -104,6 +121,7 @@
 .shDo{ padding: .35rem 0; }
 .shDo .button{ height: 1.2rem; font-size: .6rem; line-height: 1.1rem; }
 .shDo .button i{ font-size: .6rem; }
+.shDo .button i.icon-check{ font-size: .7rem; }
 
 .mod{ background: #FFF; margin: .5rem 0; }
 .modTitle{ overflow: hidden; padding:.5rem .7rem; border-bottom: 1px solid #EEE; }
@@ -113,7 +131,7 @@
 .modTitle .icon-right{ font-size: .5rem; }
 .modTitle .icon-xiangxia{ font-size: .7rem; }
 
-.rpItem{ overflow: hidden; padding:.4rem 0 .3rem; margin: 0 .7rem; border-bottom: 1px solid #F4F4F4; }
+.rpItem{ overflow: hidden; padding:.5rem 0; margin: 0 .7rem; border-bottom: 1px solid #F4F4F4; }
 .rpTitle{ font-size: .8rem; line-height: 1rem; margin-bottom: .1rem; }
 .rpImage{ width:4.2rem; margin-left: .5rem; }
 .rpImage img{ width: 4.2rem; height:auto; border-radius: 3px; display: block; }
@@ -314,4 +332,4 @@
 .quotePost{ background: #F4F4F4; padding:.4rem .5rem .3rem; margin:0 .7rem .7rem; }
 .quotePost h3{ font-weight: normal; font-size: .7rem; margin: 0; }
 
-.commentReplyBedge{ background: #F2F2F2; border-radius: .7rem; margin-left: 10px; display: inline-block; padding: 1px 10px; }
+.commentReplyBedge{ background: #F2F2F2; border-radius: .7rem; display: inline-block; padding: 1px 10px; }
